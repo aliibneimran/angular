@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { Car } from './car';
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class CarService {
@@ -19,5 +20,15 @@ getAll() {
       return res['data'];
     })
   );
+}
+store(car: Car) {
+  return this.http.post(`${this.baseUrl}/store`, { data: car }).pipe(
+    map((res: any) => {
+      return res['data'];
+    })
+  );
+}
+update(car: Car) {
+  return this.http.put(`${this.baseUrl}/update`, { data: car });
 }
 }

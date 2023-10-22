@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-.table{
+#theList{
     width: 500px;
+    margin: auto;
+}
+.table{
+    width: 1000px;
+    margin: auto;
+}
+#theForm{
+    width: 500px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
 }

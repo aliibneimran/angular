@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Car } from './car';
 import { CarService } from './car.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { CarService } from './car.service';
 })
 export class AppComponent implements OnInit {
   cars: Car[] = [];
+  car: Car =  {model:'', price:0};
   error = '';
   success = '';
         
@@ -31,5 +33,39 @@ export class AppComponent implements OnInit {
         this.error = err;
       }
     );
+  }
+  addCar(f: NgForm) {
+    this.resetAlerts();
+
+    this.carService.store(this.car).subscribe(
+      (res: Car) => {
+        // Update the list of cars
+        this.cars.push(res)
+
+        // Inform the user
+        this.success = 'Created successfully';
+
+        // Reset the form
+        f.reset();
+      },
+      (err) => (this.error = err.message)
+    );
+  }
+  resetAlerts() {
+    this.error = '';
+    this.success = '';
+  }
+
+  updateCar(name: any, price: any, id: any) {
+    this.resetAlerts();
+
+    this.carService
+      .update({ model: name.value, price: price.value, id: +id })
+      .subscribe(
+        (res) => {
+          this.success = 'Updated successfully';
+        },
+        (err) => (this.error = err)
+      );
   }
 }

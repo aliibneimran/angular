@@ -12,6 +12,9 @@ import { TechComponent } from './tech/tech.component';
 import { FashionComponent } from './fashion/fashion.component';
 import { SportComponent } from './sport/sport.component';
 import { HealthComponent } from './health/health.component';
+import { ContactComponent } from './contact/contact.component';
+import { SinglePostComponent } from './single-post/single-post.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HealthComponent } from './health/health.component';
     TechComponent,
     FashionComponent,
     SportComponent,
-    HealthComponent
+    HealthComponent,
+    ContactComponent,
+    SinglePostComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

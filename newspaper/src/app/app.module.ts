@@ -17,6 +17,8 @@ import { HealthComponent } from './health/health.component';
 import { ContactComponent } from './contact/contact.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { VideoComponent } from './video/video.component';
+import { BreakingComponent } from './breaking/breaking.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { VideoComponent } from './video/video.component';
     HealthComponent,
     ContactComponent,
     SinglePostComponent,
-    VideoComponent
+    VideoComponent,
+    BreakingComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

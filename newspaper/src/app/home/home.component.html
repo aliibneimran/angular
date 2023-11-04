@@ -1,17 +1,9 @@
 <div id="container">
     <section class="heading-news2">
         <div class="container">    
-            <div class="ticker-news-box">
-                <span class="breaking-news">breaking news</span>
-                <ul id="js-news">
-                    <li class="news-item"><span class="time-news">11:36 pm</span>  <a href="assets/#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a> Donec odio. Quisque volutpat mattis eros... </li>
-                    <li class="news-item"><span class="time-news">12:40 pm</span>  <a href="assets/#">Dëshmitarja Abrashi: E kam parë Oliverin në turmë,</a> ndërsa neve na shpëtoi “çika Mille” </li>
-                    <li class="news-item"><span class="time-news">11:36 pm</span>  <a href="assets/#">Franca do të bashkëpunojë me Kosovën në fushën e shëndetësisë. </a></li>
-                    <li class="news-item"><span class="time-news">01:00 am</span>  <a href="assets/#">DioGuardi, kështu e mbrojti Kosovën në Washington, </a> para serbit Vejvoda </li>
-                </ul>
-            </div>
+            <app-breaking></app-breaking>
 
-            <div class="iso-call heading-news-box" *ngFor="let post of tblposts;let i = index;">
+            <div class="iso-call heading-news-box">
                 <div class="image-slider snd-size">
                     <span class="top-stories">TOP STORIES</span>
                     <ul class="bxslider">
@@ -21,7 +13,7 @@
                                 <div class="hover-box">
                                     <div class="inner-hover">
                                         <a class="category-post sport" href="assets/sport.html">Sport</a>
-                                        <h2><a routerLink="single">{{post.PostTitle}} </a></h2>
+                                        <h2><a routerLink="single">Lorem ipsum</a></h2>
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>27 may 2013</li>
                                             <li><i class="fa fa-user"></i>by <a href="assets/#">John Doe</a></li>

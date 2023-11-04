@@ -1,0 +1,15 @@
+export interface Post{
+    id: number,
+    PostTitle: string,
+    CategoryId?: number,
+    SubCategoryId?: number,
+    PostDetails: string,
+    PostingDate: string,
+    UpdationDate: string,
+    Is_Active: number,
+    PostUrl: string,
+    PostImage: string,
+    viewCounter: number,
+    postedBy: string,
+    lastUpdatedBy: string,
+}

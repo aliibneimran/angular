@@ -11,7 +11,7 @@
                 </ul>
             </div>
 
-            <div class="iso-call heading-news-box">
+            <div class="iso-call heading-news-box" *ngFor="let post of tblposts;let i = index;">
                 <div class="image-slider snd-size">
                     <span class="top-stories">TOP STORIES</span>
                     <ul class="bxslider">
@@ -21,7 +21,7 @@
                                 <div class="hover-box">
                                     <div class="inner-hover">
                                         <a class="category-post sport" href="assets/sport.html">Sport</a>
-                                        <h2><a routerLink="single">Phasellus ultrices nulla quis nibh. Quisque a lectus. </a></h2>
+                                        <h2><a routerLink="single">{{post.PostTitle}} </a></h2>
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>27 may 2013</li>
                                             <li><i class="fa fa-user"></i>by <a href="assets/#">John Doe</a></li>

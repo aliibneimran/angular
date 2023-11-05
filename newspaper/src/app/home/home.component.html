@@ -2,23 +2,23 @@
     <section class="heading-news2">
         <div class="container">    
             <app-breaking></app-breaking>
-
+            <!-- *ngFor="let item of news;let i = index;" -->
             <div class="iso-call heading-news-box">
                 <div class="image-slider snd-size">
                     <span class="top-stories">TOP STORIES</span>
                     <ul class="bxslider">
-                        <li>
+                        <li *ngFor="let item of posts">
                             <div class="news-post image-post">
                                 <img src="assets/upload/news-posts/h7.jpg" alt="">
                                 <div class="hover-box">
                                     <div class="inner-hover">
-                                        <a class="category-post sport" href="assets/sport.html">Sport</a>
-                                        <h2><a routerLink="single">Lorem ipsum</a></h2>
+                                        <a class="category-post sport" routerLink="sport">Sport</a>
+                                        <h2><a routerLink="single">{{item.PostTitle}}</a></h2>
                                         <ul class="post-tags">
-                                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                            <li><i class="fa fa-user"></i>by <a href="assets/#">John Doe</a></li>
-                                            <li><a href="assets/#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                            <li><i class="fa fa-eye"></i>872</li>
+                                            <li><i class="fa fa-clock-o"></i>{{item.PostingDate}}</li>
+                                            <li><i class="fa fa-user"></i>by <a routerLink="">{{item.postedBy}}</a></li>
+                                            <li><a routerLink=""><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                                            <li><i class="fa fa-eye"></i>{{item.viewCounter}}</li>
                                         </ul>
                                     </div>
                                 </div>

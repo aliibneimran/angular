@@ -23,9 +23,9 @@ export class WorldComponent {
   getPosts(): void {
     this.postService.getAll().subscribe(
       (data: Post[]) => {
-        console.log(data);
-        // this.Post = data;
-        // this.success = 'successful retrieval of the list';
+        // console.log(data);
+        this.posts = data;
+        this.success = 'successful retrieval of the list';
       },
       // (err) => {
       //   console.log(err);

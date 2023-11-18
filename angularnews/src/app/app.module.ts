@@ -30,7 +30,7 @@ import { SliderComponent } from './slider/slider.component';
     AboutComponent,
     SearchComponent,
     SportsComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

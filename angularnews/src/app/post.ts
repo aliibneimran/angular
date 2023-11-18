@@ -5,7 +5,7 @@ export interface Post{
     SubCategoryId?: number,
     PostDetails: string,
     PostingDate: string,
-    UpdationDate: string,
+    UpdationDate: number,
     Is_Active: number,
     PostUrl: string,
     PostImage: string,

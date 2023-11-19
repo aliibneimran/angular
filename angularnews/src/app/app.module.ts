@@ -17,6 +17,7 @@ import { SportsComponent } from './sports/sports.component';
 import { SliderComponent } from './slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     SportsComponent,
     SliderComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

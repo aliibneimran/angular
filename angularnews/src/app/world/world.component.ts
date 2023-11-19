@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./world.component.css']
 })
 export class WorldComponent {
+  constructor(private http:HttpClient){}
+  getAll() {
+    this.http.get('http://localhost/wdpf55_angular/angular/angularnews/api/newslist.php').subscribe((result=>{}));
+  }
 
 }

@@ -1,11 +1,23 @@
 <?php
-include 'connect.php';
+include_once("connect.php");
 
-$sql = "INSERT INTO tblcontact VALUE(NULL,'$name','$email','$subject','$message')";
-$result = $db->query($sql);
-if ($result){
-    echo json_encode("Successfull");
-} else {
-    http_response_code(404);
-    echo json_encode("Error: " . $db->error);
+$postdata = file_get_contents("php://input");
+$result = json_decode($postdata);
+
+if(isset($result->name) && isset($result->email) && isset($result->subject) && isset($result->message)){
+
+    $name = $result->name;
+    $email = $result->email;
+    $subject = $result->subject;
+    $message = $result->message;
+
+    // $status =[]
+
+    $db->query("INSERT INTO tblcontact VALUE(NULL,'$name','$email','$subject','$message')");
+
+    if ($db->affected_rows>0){
+        echo json_encode(['status'=>true]);
+    }
+}else{
+    echo json_encode(['status'=>false]);
 }

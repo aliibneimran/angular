@@ -1,17 +1,15 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header('Access-Control-Allow-Credentials: true');
-header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header("Access-Control-Allow-Headers: access");
+header("access-control-allow-methods: put,get,post,delete");
 header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-define('HOST', 'localhost');
-define('USER', 'root');
-define('PASS', '');
-define('NAME', 'newsportal');
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "newsportal";
 
-$db = new mysqli(HOST ,USER ,PASS ,NAME);
-if ($db->connect_errno) {
-	die("Database connection error:" . $db->connect_errno);
-}
+$db = new mysqli($host,$username,$password,$database);
+
 ?>

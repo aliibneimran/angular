@@ -9,10 +9,13 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   constructor(private http:HttpClient){}
   onSubmit(data:any){
-    this.http.post('http://localhost/wdpf_angular/angular/angularnews/api/contact.php',data)
-    .subscribe((result)=>{
-      console.log(result)
+    this.http.post('http://localhost/wdpf55_angular/angular/angularnews/api/contact.php',data).subscribe((result)=>{
+      // console.log(result);
+      if(result){
+        alert("Successfully Inserted");
+      }else{
+        alert("No fields can be blank");
+      }
     })
-    console.log(data)
   }
 }

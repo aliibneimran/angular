@@ -11,7 +11,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'single', component: SingleComponent},
+  { path: 'single/:id', component: SingleComponent},
   { path: 'search', component: SearchComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent},

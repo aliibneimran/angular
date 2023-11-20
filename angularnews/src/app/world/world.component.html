@@ -9,20 +9,20 @@
           <div class="container">
               <h3 class="category-title">Category: Business</h3>
               <div class="row">
-                  <div class="col-md-4 post-entry-2 half border-start" data-aos="fade-up">
-                      <a routerLink="single" class="me-4 thumbnail">
-                          <img src="assets/img/post-landscape-6.jpg" alt class="img-fluid" />
+                  <div class="col-md-4 post-entry-2 half border-start" data-aos="fade-up" *ngFor="let item of posts.data;">
+                      <a routerLink="/single/{{item.id}}" class="me-4 thumbnail">
+                          <img [src]="'assets/img/'+ item.PostImage" alt class="img-fluid" />
                       </a>
                       <div>
                           <div class="post-meta">
                               <span class="date">Culture</span>
-                              <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                              <span class="mx-1">&bullet;</span> <span>{{item.PostingDate}}</span>
                           </div>
                           <h3>
-                              <a routerLink="single">What is the son of Football Coach John Gruden, Deuce Gruden doing Now?</a>
+                              <a routerLink="/single">{{item.PostTitle}}</a>
                           </h3>
                           <p>
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, hic sint delectus nam quaerat suscipit repudiandae temporibus aliquam nesciunt expedita nulla ex reiciendis tenetur porro animi non perspiciatis ducimus libero!
+                             {{item.PostDetails}}
                           </p>
                           <div class="d-flex align-items-center author">
                               <div class="photo">
@@ -34,7 +34,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-md-4 post-entry-2 half border-start" data-aos="fade-up">
+                  <!-- <div class="col-md-4 post-entry-2 half border-start" data-aos="fade-up">
                       <a routerLink="single" class="me-4 thumbnail">
                         <img src="assets/img/post-landscape-1.jpg" alt="" class="img-fluid">
                       </a>
@@ -97,7 +97,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
               </div>
               <div class="text-start py-4">
                   <div class="custom-pagination">

@@ -18,6 +18,7 @@ import { SliderComponent } from './slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     SportsComponent,
     SliderComponent,
     ProductDetailsComponent,
+    CommentComponent,
+    SearchFormComponent,
   ],
   imports: [
     BrowserModule,

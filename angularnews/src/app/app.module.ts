@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
     ProductDetailsComponent,
     CommentComponent,
     SearchFormComponent,
+    ArchiveComponent,
   ],
   imports: [
     BrowserModule,

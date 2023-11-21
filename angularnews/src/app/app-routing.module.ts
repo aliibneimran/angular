@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
 import { SportsComponent } from './sports/sports.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{provide: APP_BASE_HREF, useValue: 'https://aii.wdpf55.com/angular/'}]
 })
 export class AppRoutingModule { }

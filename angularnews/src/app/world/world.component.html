@@ -11,7 +11,7 @@
               <div class="row">
                   <div class="col-md-4 post-entry-2 half border-start" data-aos="fade-up" *ngFor="let item of posts.data;">
                       <a routerLink="/single/{{item.id}}" class="me-4 thumbnail">
-                          <img [src]="'assets/img/'+ item.PostImage" alt class="img-fluid" />
+                          <img [src]="'https://aii.wdpf55.com/angular/admin/postimages/'+ item.PostImage" alt class="img-fluid" />
                       </a>
                       <div>
                           <div class="post-meta">
@@ -19,14 +19,14 @@
                               <span class="mx-1">&bullet;</span> <span>{{item.PostingDate}}</span>
                           </div>
                           <h3>
-                              <a routerLink="/single">{{item.PostTitle}}</a>
+                              <a routerLink="/single/{{item.id}}">{{item.PostTitle}}</a>
                           </h3>
                           <p>
                              {{item.PostDetails}}
                           </p>
                           <div class="d-flex align-items-center author">
                               <div class="photo">
-                                  <img src="assets/img/person-2.jpg" alt class="img-fluid" />
+                                  <img src="https://aii.wdpf55.com/angular/assets/img/person-2.jpg" alt class="img-fluid" />
                               </div>
                               <div class="name">
                                   <h3 class="m-0 p-0">Wade Warren</h3>

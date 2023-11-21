@@ -6,15 +6,16 @@
           <div class="col-md-9 post-content" data-aos="fade-up">
 
             <!-- ======= Single Post Content ======= -->
-            <div class="single-post" *ngFor="let item of posts.data">
+            <div class="single-post">
               <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
 
               <figure class="my-4">
-                <img [src]="'assets/img/'+ item.data.PostImage" alt="" class="img-fluid">
-                <figcaption>{{item.PostTitle}} </figcaption>
+                <img src="../admin/postimages/5c82b473b696a6ec1f9c0737f152a63a.jpg" alt="" class="img-fluid">
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure ipsum reprehenderit repellat! </figcaption>
               </figure>
-              <p>{{item.PostDetails}}</p>
-            </div><!-- End Single Post Content -->
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit unde possimus tempora reiciendis velit alias officia earum nemo ad delectus numquam modi, impedit, doloremque ullam pariatur consequuntur adipisci fugiat autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorum dolores, quo consequatur eos deserunt neque. Ea eos ratione dolorum, deleniti et nostrum eaque ut ipsa excepturi dolor saepe nemo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic commodi dicta obcaecati maiores expedita eaque consequatur laborum quibusdam provident ducimus dolorum quo, nesciunt, id, officia saepe accusantium fugiat numquam soluta.</p>
+            </div>
+            <!-- End Single Post Content -->
 
           <app-comment></app-comment>
 

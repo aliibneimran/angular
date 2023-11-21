@@ -6,15 +6,16 @@
           <div class="col-md-9 post-content" data-aos="fade-up">
 
             <!-- ======= Single Post Content ======= -->
-            <div class="single-post" *ngFor="let item of posts.data">
+            <div class="single-post" *ngIf="posts">
               <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
 
               <figure class="my-4">
-                <img [src]="'assets/img/'+ item.data.PostImage" alt="" class="img-fluid">
-                <figcaption>{{item.PostTitle}} </figcaption>
+                <img [src]="'assets/img/'+ posts.data.PostImage" alt="" class="img-fluid">
+                <figcaption>{{posts.PostTitle}} </figcaption>
               </figure>
-              <p>{{item.PostDetails}}</p>
-            </div><!-- End Single Post Content -->
+              <p>{{posts.PostDetails}}</p>
+            </div>
+            <!-- End Single Post Content -->
 
           <app-comment></app-comment>
 

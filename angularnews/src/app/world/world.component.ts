@@ -13,7 +13,7 @@ export class WorldComponent{
   success = "";
   constructor(private http:HttpClient){}
   getAll() {
-    this.http.get('http://localhost/wdpf55_angular/angular/angularnews/api/newslist.php').subscribe((result=>{
+    this.http.get('http://localhost/wdpf_angular/angular/angularnews/api/newslist.php').subscribe((result=>{
       this.posts = result;
       console.log(this.posts)
     }));

@@ -1,12 +1,13 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-sports',
-  templateUrl: './sports.component.html',
-  styleUrls: ['./sports.component.css']
+  selector: 'app-travel',
+  templateUrl: './travel.component.html',
+  styleUrls: ['./travel.component.css']
 })
-export class SportsComponent {
+export class TravelComponent {
   posts:any = [];
   error = "";
   success = "";

@@ -20,6 +20,13 @@ import { FormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { ArchiveComponent } from './archive/archive.component';
+import { NationalComponent } from './national/national.component';
+import { BusinessComponent } from './business/business.component';
+import { TechComponent } from './tech/tech.component';
+import { HealthComponent } from './health/health.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { FashionComponent } from './fashion/fashion.component';
+import { TravelComponent } from './travel/travel.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +47,13 @@ import { ArchiveComponent } from './archive/archive.component';
     CommentComponent,
     SearchFormComponent,
     ArchiveComponent,
+    NationalComponent,
+    BusinessComponent,
+    TechComponent,
+    HealthComponent,
+    EntertainmentComponent,
+    FashionComponent,
+    TravelComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-sports',
-  templateUrl: './sports.component.html',
-  styleUrls: ['./sports.component.css']
+  selector: 'app-national',
+  templateUrl: './national.component.html',
+  styleUrls: ['./national.component.css']
 })
-export class SportsComponent {
+export class NationalComponent {
   posts:any = [];
   error = "";
   success = "";
